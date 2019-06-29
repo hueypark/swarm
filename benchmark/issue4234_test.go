@@ -11,7 +11,7 @@ import (
 
 func BenchmarkIssue4234(b *testing.B) {
 	insertRowCount := 100
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 20; i++ {
 		b.Run(fmt.Sprintf("%d", insertRowCount), func(b *testing.B) {
 			db, err := sql.Open(
 				"postgres",
